@@ -1,0 +1,96 @@
+:root {
+    --pole: #A7AF8D;
+    --color: white;
+}
+
+body {
+    font-size: 5px;
+    background: #0b1522;
+    background-size: cover;
+}
+
+.wind-turbine {
+    position: absolute;
+    top: 44%;
+    left: 45%;
+    
+}
+
+.pole {
+    width: 3em;
+    margin: 2em o.5em;
+    border-bottom: 70em solid navajowhite;
+    border-right: 1em solid transparent;
+    border-left: 1em solid transparent;
+    box-shadow: inset -2px -2px 5px #000000BF;
+}
+.rotor {
+    width: 6em;
+    height: 6em;
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: inset 2px 2px 5px #00000069;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0dg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.blade {
+    width: 32em;
+    height: 1em;
+    background-color: var(--color);
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    border-radius: 0.3em 5em 0;
+    box-shadow: inset 2px 2px 5px #00000069;
+    transform-origin: 0 1em;
+}
+
+.blade:before {
+    content: "";
+    background-color: var(--color);
+    position: absolute;
+    width: 5em;
+    height: 2em;
+}
+
+.blade:after {
+    content: "";
+    width: 1.5em;
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    border-top: 2em solid var(--color);
+    border-right: 22em solid transparent;
+    border-left: 6em solid transparent;
+}
+
+.blade1 {
+    transform: rotate(0deg)
+}
+.blade2 {
+    transform: rotate(120deg);
+}
+.blade3 {
+    transform: rotate(240deg);
+}
+
+#h1 {
+    color: antiquewhite;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    border: 2px solid gray;
+    border-radius: 10px 100px /120px;
+}
